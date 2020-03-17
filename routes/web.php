@@ -28,3 +28,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/Admin', function(){
     return view('Admin.Admin');
 });
+Route::get('/Add_product', function(){
+    return view('Add_product.Add_product');
+});
