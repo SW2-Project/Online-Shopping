@@ -31,3 +31,5 @@ Route::get('/Admin', function(){
 Route::get('/Add_product', function(){
     return view('Add_product.Add_product');
 });
+
+Route::post('AddProduct', 'UploadController@upload');

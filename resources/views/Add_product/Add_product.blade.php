@@ -17,27 +17,38 @@
         h1{text-align: center; color: #fff; font-weight: normal; margin-bottom: 20px;}
         
         input{width: 100%; background: none; border: 1px solid #fff; border-radius: 3px; padding: 6px 15px; box-sizing: border-box; margin-bottom: 20px; font-size: 16px; color: #fff;}
-        button{width: 100%; background: none; border: 1px solid #fff; border-radius: 3px; padding: 6px 15px; box-sizing: border-box; margin-bottom: 20px; font-size: 16px;}
-        button{ background: #bac675; border: 0; cursor: pointer; color: #3e3d3d;}
-        button:hover{ background: #a4b15c; transition: .6s;}
+        
+        input[type="submit"]{ background: #bac675; border: 0; cursor: pointer; color: #3e3d3d;}
+        input[type="submit"]:hover{ background: #a4b15c; transition: .6s;}
+
+        input[type="file"]{ background: #bac675; border: 0; cursor: pointer; color: #3e3d3d;}
+        input[type="file"]:hover{ background: #a4b15c; transition: .6s;}
+        
         
         ::placeholder{color: #fff;}
     
     </style>
-
+    <!-- 
+        button{width: 100%; background: none; border: 1px solid #fff; border-radius: 3px; padding: 6px 15px; box-sizing: border-box; margin-bottom: 20px; font-size: 16px; background: #bac675; border: 0; cursor: pointer; color: #3e3d3d;}
+        button:hover{ background: #a4b15c; transition: .6s;}
+    -->
     <body>
     
         <div class="form-wrap">
         
-            <form>
+        <form action="{{ URL::to('AddProduct') }}" method="post" enctype="multipart/form-data">
             
                 <h1>Add Product</h1>
                 <input type="text" placeholder="Name of The Product">
                 <input type="text" placeholder="Description">
-                <button type="submit" form="form1" value="Submit">Add photo</button>
+                <input type="file" name="file" id="file">
+				<input type="submit" value="Upload" name="submit">
+                <input type="hidden" value="{{ csrf_token() }}" name="_token">
+                <!--
+                <button type="submit" form="form1" value="Submit">Submit</button>
                 
                 <button type="submit" form="form1" value="Submit">Submit</button>
-            
+                -->
             </form>
         
         </div>
