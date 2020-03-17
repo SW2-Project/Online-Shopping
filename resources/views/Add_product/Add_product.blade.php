@@ -5,7 +5,7 @@
 
     
     <head>
-        <title>Add Product</title>
+        <title>Add</title>
     </head>
     
     <style>

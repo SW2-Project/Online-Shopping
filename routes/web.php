@@ -32,4 +32,4 @@ Route::get('/Add_product', function(){
     return view('Add_product.Add_product');
 });
 
-Route::post('AddProduct', 'UploadController@upload');
+Route::post('AddProduct', 'AddProduct@upload');
