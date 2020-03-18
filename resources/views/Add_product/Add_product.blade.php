@@ -39,9 +39,9 @@
         <form action="{{ URL::to('AddProduct') }}" method="post" enctype="multipart/form-data">
             
                 <h1>Add Product</h1>
-                <input type="text" placeholder="Name of The Product" name="name">
-                <input type="text" placeholder="Description" name = "Description">
-                <input type="file" name="file" id="file">
+                <input type="text" placeholder="Name of The Product" name="name" require>
+                <input type="text" placeholder="Description" name = "Description" require>
+                <input type="file" name="file" id="file" require>
 				<input type="submit" value="Upload" name="submit">
                 <input type="hidden" value="{{ csrf_token() }}" name="_token">
                 <!--
