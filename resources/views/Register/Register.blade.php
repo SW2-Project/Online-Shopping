@@ -32,7 +32,7 @@
 			</div>
 		</div>
 		<div class="colorlibcopy-agile">
-			<p>© 2018 Colorlib Signup Form. All rights reserved | Design by <a href="https://colorlib.com/" target="_blank">Colorlib</a></p>
+		<p>&copy; SoftWare Enginering 2 Project <a>SW2</a>.</p>
 		</div>
 		<ul class="colorlib-bubbles">
 			<li></li>
