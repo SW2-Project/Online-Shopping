@@ -14,11 +14,12 @@
 		<h1>Creative SignUp Form</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-				<form action="Register" method="post">
+				<form action="{{ URL::to('Registerr') }}" method="post" enctype="multipart/form-data">
 					<input class="text" type="text" name="Username" placeholder="Username" required="">
 					<input class="text email" type="email" name="email" placeholder="Email" required="">
 					<input class="text" type="password" name="password" placeholder="Password" required="">
 					<input class="text w3lpass" type="password" name="pass" placeholder="Confirm Password" required="">
+					<input type="hidden" value="{{ csrf_token() }}" name="_token">
 					<div class="wthree-text">
 				
 						<div class="clear"> </div>
