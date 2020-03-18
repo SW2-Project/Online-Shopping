@@ -34,6 +34,9 @@ Route::get('/Add_product', function(){
 });
 
 Route::post('AddProduct', 'AddProduct@upload');
+Route::post('Registerr', 'Registerr@upload');
+Route::post('deleteproduct', 'deleteproduct@delete');
+
 
 Route::get('/Register', function(){
     return view('Register.Register');
@@ -46,4 +49,3 @@ Route::get('/delete_product', function(){
     return view('delete_product.delete_product');
 });
 
-Route::get('deleteProduct', 'deleteProduct@delete')->name('deleteproduct');
