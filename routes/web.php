@@ -34,7 +34,7 @@ Route::get('/Add_product', function(){
 });
 
 Route::post('AddProduct', 'AddProduct@upload');
-Route::post('Registerr', 'Registerr@upload');
+Route::post('Registerr', 'Registe_r@upload');
 Route::post('deleteproduct', 'deleteproduct@delete');
 
 

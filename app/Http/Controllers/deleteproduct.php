@@ -4,7 +4,6 @@ use \Request as Input;
 class deleteProduct extends Controller {
 
 	public function delete(){
-		echo 'tos';
 		$this->exqute(Input::get('id'));
     }
     

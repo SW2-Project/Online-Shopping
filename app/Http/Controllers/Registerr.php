@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers;
 use \Request as Input;
 
-class Register extends Controller {
+class Registerr extends Controller {
 
 	public function upload(){
         
