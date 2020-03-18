@@ -18,7 +18,7 @@
 					<input class="text" type="text" name="Username" placeholder="Username" required="">
 					<input class="text email" type="email" name="email" placeholder="Email" required="">
 					<input class="text" type="password" name="password" placeholder="Password" required="">
-					<input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
+					<input class="text w3lpass" type="password" name="pass" placeholder="Confirm Password" required="">
 					<div class="wthree-text">
 				
 						<div class="clear"> </div>
