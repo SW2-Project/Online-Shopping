@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Login.Login');
 });
 
 Auth::routes();
@@ -28,9 +28,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/Admin', function(){
     return view('Admin.Admin');
 });
-Route::get('/Login', function(){
-    return view('Login.Login');
-});
+
 Route::get('/Add_product', function(){
     return view('Add_product.Add_product');
 });
