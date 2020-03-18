@@ -33,16 +33,24 @@
         </style>
     </head>
     <body>
-        <table action="{{ URL::to('deleteProduct') }}">
+        <table>
             <tr>
                 <th>Id</th>
-                <th>Username</th>
+                <th>name</th>
                 <th>Photo</th>
             </tr>
-            <div class="form-wrap">
-                    <input type="text" placeholder="Enter id" name="id">
-                    <input type="submit" value="delete" name="delete">
-                    </div>
+        <div class="form-wrap">
+        
+        <form action="{{ URL::to('deleteproduct') }}" method="post" enctype="multipart/form-data">
+            
+                <h1>Add Product</h1>
+                <input type="text" placeholder="Enter id" name="id" require>
+				<input type="submit" value="Delete" name="submit">
+                <input type="hidden" value="{{ csrf_token() }}" name="_token">
+                
+            </form>
+        
+        </div>
             <?php
                 $conn = mysqli_connect("localhost", "root", "", "sw2");
                 // Check connection
