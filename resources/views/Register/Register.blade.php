@@ -14,7 +14,7 @@
 		<h1>Creative SignUp Form</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-				<form action="#" method="post">
+				<form action="Register" method="post">
 					<input class="text" type="text" name="Username" placeholder="Username" required="">
 					<input class="text email" type="email" name="email" placeholder="Email" required="">
 					<input class="text" type="password" name="password" placeholder="Password" required="">
