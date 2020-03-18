@@ -7,10 +7,14 @@ class AddProduct extends Controller {
         
 		if(Input::hasFile('file')){
             $file = Input::file('file');
-			//$file->move('uploads', $file->getClientOriginalName());
+			$file->move('uploads', $file->getClientOriginalName());
 			//echo '<script>alert("product Inserted into Database")</script>';
 			//echo(Input::get('name'));
-			$this->add(Input::get('name'),Input::get('Description'),$file);
+			//$dir = new DirectoryIterator(dirname('uploads'));
+			//foreach ($dir as $fileinfo) {
+    			//echo $fileinfo->getFilename() . "\n";
+			//}
+			$this->add(Input::get('name'),Input::get('Description'),$file->getClientOriginalName());
 		}
         
     }

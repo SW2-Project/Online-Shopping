@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 18, 2020 at 02:54 AM
+-- Generation Time: Mar 18, 2020 at 07:03 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -32,7 +32,7 @@ CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `name` text NOT NULL,
   `details` text NOT NULL,
-  `photo` blob NOT NULL
+  `photo` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -40,7 +40,30 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `details`, `photo`) VALUES
-(1, 'first product', 'good product', 0x433a78616d7070096d70706870373837422e746d70);
+(26, 'first product', 'good product', '7-segment-display-pin-diagr_0.png'),
+(27, '2nd product', 'good product', '7-segment-display-pin-diagr_0.png'),
+(28, '3rd product', 'good product', '79822733_1015938935459689_4586960316906078208_o.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `email` text NOT NULL,
+  `password` text NOT NULL,
+  `rule` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `rule`) VALUES
+(1, 'Mostafa Omar', 'admin@admin.com', '12345678', 0);
 
 --
 -- Indexes for dumped tables
@@ -53,6 +76,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -60,6 +89,12 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
