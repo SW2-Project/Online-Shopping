@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Login.Login');
+    return view('welcome');
 });
 
 Auth::routes();
@@ -35,14 +35,15 @@ Route::get('/Add_product', function(){
 
 Route::post('AddProduct', 'AddProduct@upload');
 
-<<<<<<< HEAD
-Route::get('/delete_product', function(){
-    return view('delete_product.delete_product');
-})->name('delete_product');
-
-Route::get('deleteProduct', 'deleteProduct@delete')->name('deleteproduct');
-=======
 Route::get('/Register', function(){
     return view('Register.Register');
 });
->>>>>>> 45d7817be48cb7853586e1055b6ed99b7f3e757e
+Route::get('/Login', function(){
+    return view('Login.Login');
+});
+
+Route::get('/delete_product', function(){
+    return view('delete_product.delete_product');
+});
+
+Route::get('deleteProduct', 'deleteProduct@delete')->name('deleteproduct');
