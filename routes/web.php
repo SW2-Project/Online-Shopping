@@ -33,3 +33,9 @@ Route::get('/Add_product', function(){
 });
 
 Route::post('AddProduct', 'AddProduct@upload');
+
+Route::get('/delete_product', function(){
+    return view('delete_product.delete_product');
+})->name('delete_product');
+
+Route::get('deleteProduct', 'deleteProduct@delete')->name('deleteproduct');

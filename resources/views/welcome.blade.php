@@ -87,7 +87,7 @@
                 <div class="links">
                     <a href="Admin">Admin Sight</a>
                     <a href="Add_product">Add Product</a>
-                    <a href="https://laravel-news.com">News</a>
+                    <a href="delete_product">delete</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>

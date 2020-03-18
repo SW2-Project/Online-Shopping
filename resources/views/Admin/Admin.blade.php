@@ -44,7 +44,7 @@
 					<h2>Delete a product from the stock</h2>
 					
 				</div>
-				<a href="#" class="button">Delete Product</a>
+				<a href="delete_product" class="button">Delete Product</a>
 			</div>		
 
 		</div>	
