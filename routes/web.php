@@ -34,3 +34,7 @@ Route::get('/Add_product', function(){
 });
 
 Route::post('AddProduct', 'AddProduct@upload');
+
+Route::get('/Register', function(){
+    return view('Register.Register');
+});
