@@ -39,8 +39,8 @@
         <form action="{{ URL::to('AddProduct') }}" method="post" enctype="multipart/form-data">
             
                 <h1>Add Product</h1>
-                <input type="text" placeholder="Name of The Product">
-                <input type="text" placeholder="Description">
+                <input type="text" placeholder="Name of The Product" name="name">
+                <input type="text" placeholder="Description" name = "Description">
                 <input type="file" name="file" id="file">
 				<input type="submit" value="Upload" name="submit">
                 <input type="hidden" value="{{ csrf_token() }}" name="_token">
@@ -49,6 +49,7 @@
                 
                 <button type="submit" form="form1" value="Submit">Submit</button>
                 -->
+                
             </form>
         
         </div>
@@ -60,3 +61,37 @@
 
 
 </html>
+<script>  
+                    $(document).ready(function(){  
+                    $('#submit').click(function(){  
+                    var image_name = $('#file').val();  
+                    var name = $('#name').val(); 
+                    var name2 = $('#Description').val(); 
+                    if(name == '')  
+                    {  
+                        alert("Please Put Name");  
+                        return false;  
+                    }
+                    if(name2 == '')  
+                    {  
+                        alert("Please Put Description");  
+                        return false;  
+                    }
+                    if(image_name == '')  
+                    {  
+                        alert("Please Select Image");  
+                        return false;  
+                    } 
+                    else  
+                    {  
+                        var extension = $('#file').val().split('.').pop().toLowerCase();  
+                        if(jQuery.inArray(extension, ['gif','png','jpg','jpeg']) == -1)  
+                        {  
+                            alert('Invalid Image File');  
+                            $('#file').val('');  
+                            return false;  
+                        }  
+                    }  
+      });  
+ });  
+ </script>  

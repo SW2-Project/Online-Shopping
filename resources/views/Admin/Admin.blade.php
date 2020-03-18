@@ -36,7 +36,7 @@
 					<h2>Add a product to the stock</h2>
 
 				</div>
-				<a href="#" class="button">Add Product</a>
+				<a href="Add_product" class="button">Add Product</a>
 			</div>		
 
 			<div class="ebox2">
