@@ -62,12 +62,10 @@
 						<button class="login100-form-btn">
 							Login
 						</button>
-					</div>
 
-					<div class="text-center p-t-90">
-						<a class="txt1" href="#">
-							Forgot Password?
-						</a>
+						<button class="login100-form-btn" href="Register">
+							Register
+						</button>
 					</div>
 				</form>
 			</div>

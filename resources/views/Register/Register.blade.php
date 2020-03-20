@@ -14,11 +14,7 @@
 		<h1>Creative SignUp Form</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-<<<<<<< HEAD
-				<form action="{{ URL::to('Registerr') }}" method="post" enctype="multipart/form-data">
-=======
 				<form action="Registerr" method="post" enctype="multipart/form-data">
->>>>>>> a86620542b0c479a8977c227e0c016a11d03bccf
 					<input class="text" type="text" name="Username" placeholder="Username" required="">
 					<input class="text email" type="email" name="email" placeholder="Email" required="">
 					<input class="text" type="password" name="password" placeholder="Password" required="">
