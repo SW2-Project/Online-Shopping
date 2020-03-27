@@ -31,7 +31,7 @@ Route::get('/Admin', function(){
 
 Route::get('/Add_product', function(){
     return view('Add_product.Add_product');
-});
+})->name('Add_product');
 
 Route::post('AddProduct', 'AddProduct@upload');
 Route::post('Log_in', 'Log_in@sign_in');
