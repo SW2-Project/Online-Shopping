@@ -14,11 +14,11 @@ class Log_in extends Controller {
     public function add($email,$password){
         
 		$connect = mysqli_connect("localhost", "root", "", "sw2");   
-      	$query = "SELECT rule FROM users WHERE email='$email' AND password='$password'";  
+		$query = "SELECT rule FROM users WHERE email='$email' AND "."password"."='$password'";
       	if(mysqli_query($connect, $query))  
       	{  
             $rule = mysqli_query($connect, $query);
-        	echo '<script>alert("$rule")</script>';  
+        	echo '<script>alert("'.$rule.'")</script>'; 
 		}
  	} 
 }
