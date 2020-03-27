@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V8</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -30,7 +30,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178" action="Log_in" method="post" enctype="multipart/form-data">
 					<span class="login100-form-title">
 						Sign In
 					</span>
@@ -47,11 +47,11 @@
 
 					<div class="text-right p-t-13 p-b-23">
 						<span class="txt1">
-							Forgot
+							Don't have an account: 
 						</span>
 
-						<a href="#" class="txt2">
-							Username / Password?
+						<a href="Register" class="txt2">
+							Sign Up
 						</a>
 					</div>
 
