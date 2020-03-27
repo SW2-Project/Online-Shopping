@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 use \Request as Input;
 
+
 class Log_in extends Controller {
 
 	public function sign_in(){
@@ -17,10 +18,12 @@ class Log_in extends Controller {
 		$rule = mysqli_query($connect, $query);
       	if($rule)  
       	{  
-			if($rule->fetch_assoc()['rule'] == 0){
-				return redirect()->route('/Login');
-			}elseif($rule->fetch_assoc()['rule'] == 1){
+			$Val = $rule->fetch_assoc()['rule'];
 
+			if($Val == 0){
+				return redirect('/Login');
+			}elseif($Val == 1){
+				return redirect('/');
 			}
 			
 		}else{
