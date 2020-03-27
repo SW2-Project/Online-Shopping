@@ -30,7 +30,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178" action="Log_in" method="post" enctype="multipart/form-data">
+				<form class="login100-form validate-form p-l-55 p-r-55 p-t-178" action="{{ URL::to('Log_in') }}" method="post" enctype="multipart/form-data">
 					<span class="login100-form-title">
 						Sign In
 					</span>
@@ -70,6 +70,7 @@
 							Sign up now
 						</a>
 					</div>
+					<input type="hidden" value="{{ csrf_token() }}" name="_token">
 				</form>
 			</div>
 		</div>

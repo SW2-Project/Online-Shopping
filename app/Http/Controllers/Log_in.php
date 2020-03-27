@@ -5,20 +5,26 @@ class Log_in extends Controller {
 
 	public function sign_in(){
         
-		
-			$this->add(Input::get('email'),Input::get('password'));
+		$this->check(Input::get('email'),Input::get('password'));
 		
         
     }
     
-    public function add($email,$password){
+    public function check($email,$password){
         
 		$connect = mysqli_connect("localhost", "root", "", "sw2");   
 		$query = "SELECT rule FROM users WHERE email='$email' AND "."password"."='$password'";
-      	if(mysqli_query($connect, $query))  
+		$rule = mysqli_query($connect, $query);
+      	if($rule)  
       	{  
-            $rule = mysqli_query($connect, $query);
-        	echo '<script>alert("'.$rule.'")</script>'; 
+			if($rule->fetch_assoc()['rule'] == 0){
+				return redirect()->route('/Login');
+			}elseif($rule->fetch_assoc()['rule'] == 1){
+
+			}
+			
+		}else{
+			echo '<script>alert("RAGE3 7SABATK W HAT 24YA2Y")</script>';
 		}
  	} 
 }
