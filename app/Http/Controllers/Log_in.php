@@ -19,6 +19,7 @@ class Log_in extends Controller {
       	if($rule)  
       	{  
 			$Val = $rule->fetch_assoc()['rule'];
+			echo $Val;
 
 			if($Val == 0){
 				return redirect('/Login');
