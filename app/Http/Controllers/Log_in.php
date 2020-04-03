@@ -23,6 +23,7 @@ class Log_in extends Controller {
     public function check($email,$password){
         
 		$connect = mysqli_connect("localhost", "root", "", "sw2");   
+<<<<<<< HEAD
 		$query = 'SELECT * FROM `users` where email="'.$email.'" and password="'.$password.'"';
 		//echo $query;
 		$result = $connect->query($query);
@@ -35,6 +36,18 @@ class Log_in extends Controller {
 				return 0;
 			}elseif($result->fetch_assoc()['rule'] == 0){
 				return 1;
+=======
+		$query = "SELECT rule FROM users WHERE email='$email' AND "."password"."='$password'";
+		$rule = mysqli_query($connect, $query);
+      	if($rule)  
+      	{  
+			$Val = $rule->fetch_assoc()['rule'];
+
+			if($Val == 0){
+				return redirect('');
+			}elseif($Val == 1){
+				return redirect('');
+>>>>>>> 4b58a1d39260d8a8347670d2434c6af2bba84003
 			}
 			
 		}else{
