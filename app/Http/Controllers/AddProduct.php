@@ -26,7 +26,8 @@ class AddProduct extends Controller {
       	$query = "INSERT INTO `products`(`name`, `details`, `photo`)  VALUES ('$name','$ditales','$file')";  
       	if(mysqli_query($connect, $query))  
       	{  
-        	echo '<script>alert("product Inserted into Database")</script>';  
+			echo '<script>alert("product Inserted into Database")</script>';
+			return redirect('delete_product');
 		}
 		//$connect.close();
  	} 
