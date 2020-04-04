@@ -5,6 +5,7 @@ class deleteProduct extends Controller {
 
 	public function delete(){
 		$this->exqute(Input::get('id'));
+		return redirect('delete_product');
     }
     
     public function exqute($i){
