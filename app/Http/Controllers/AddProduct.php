@@ -15,6 +15,7 @@ class AddProduct extends Controller {
     			//echo $fileinfo->getFilename() . "\n";
 			//}
 			$this->add(Input::get('name'),Input::get('Description'),Input::get('price'),$file->getClientOriginalName());
+			return redirect('delete_product');
 		}
         
     }
@@ -28,7 +29,7 @@ class AddProduct extends Controller {
       	if(mysqli_query($connect, $query))  
       	{  
 			echo '<script>alert("product Inserted into Database")</script>';
-			return redirect('delete_product');
+			
 		}
 		//$connect.close();
  	} 
