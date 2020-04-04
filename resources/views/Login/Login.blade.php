@@ -35,8 +35,8 @@
 						Sign In
 					</span>
 
-					<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-						<input class="input100" type="text" name="email" placeholder="Username"> <!--Change Place Holder-->
+					<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter Email">
+						<input class="input100" type="text" name="email" placeholder="Email"> <!--  Editing done -->
 						<span class="focus-input100"></span>
 					</div>
 
