@@ -39,11 +39,12 @@
         <form action="{{ URL::to('AddProduct') }}" method="post" enctype="multipart/form-data">
             
                 <h1>Add Product</h1>
-                <input type="text" placeholder="Name of The Product" name="name" require>
-                <input type="text" placeholder="Description" name = "Description" require>
-                <input type="file" name="file" id="file" require>
-				<input type="submit" value="Upload" name="submit">
+                <input type="text" placeholder="Name of The Product" name="name" require> <!--Require Value not Working-->
+                <input type="text" placeholder="Description" name = "Description" require> <!--Require Value not Working-->
+                <input type="file" name="file" id="file" require> <!--Require Value not Working-->
+				<input type="submit" value="Upload" name="submit"> <!--Require Value not Working-->
                 <input type="hidden" value="{{ csrf_token() }}" name="_token">
+                <!--Product has no Price-->
                 <!--
                 <button type="submit" form="form1" value="Submit">Submit</button>
                 
