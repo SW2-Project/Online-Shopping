@@ -41,7 +41,7 @@
                 <h1>Add Product</h1>
                 <input type="text" placeholder="Name of The Product" name="name" required=""> <!--Edit Done-->
                 <input type="text" placeholder="Description" name = "Description" required=""> <!--Edit Done-->
-                <input type="number" placeholder="Enter Price" name="price" required=""> <!--Price Field Added-->
+                <input type="number" placeholder="Enter Price" name="price" min="0" required=""> <!--Price Field Added-->
                 <input type="file" name="file" id="file" required=""> <!--Edit Done-->
 				<input type="submit" value="Upload" name="submit"> 
                 <input type="hidden" value="{{ csrf_token() }}" name="_token">

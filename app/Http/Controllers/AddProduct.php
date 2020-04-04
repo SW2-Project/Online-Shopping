@@ -23,7 +23,7 @@ class AddProduct extends Controller {
         
 		$connect = mysqli_connect("localhost", "root", "", "sw2");  
  		//$file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));  
-		  $query = "INSERT INTO products`(name`, details, price, photo)  VALUES ('$name','$ditales',$price,'$file')";  
+		  $query = "INSERT INTO `products`(`name`, `details`, `price`, `photo`)  VALUES ('$name','$ditales',$price,'$file')";  
 		  /*Edit to the query and product table add price value*/
       	if(mysqli_query($connect, $query))  
       	{  
