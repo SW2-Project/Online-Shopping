@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 18, 2020 at 07:03 AM
+-- Generation Time: Apr 04, 2020 at 05:01 PM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.2
+-- PHP Version: 7.2.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -32,6 +32,7 @@ CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `name` text NOT NULL,
   `details` text NOT NULL,
+  `price` int(11) NOT NULL,
   `photo` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -39,10 +40,10 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `details`, `photo`) VALUES
-(26, 'first product', 'good product', '7-segment-display-pin-diagr_0.png'),
-(27, '2nd product', 'good product', '7-segment-display-pin-diagr_0.png'),
-(28, '3rd product', 'good product', '79822733_1015938935459689_4586960316906078208_o.jpg');
+INSERT INTO `products` (`id`, `name`, `details`, `price`, `photo`) VALUES
+(26, 'first product', 'good product', 50, '7-segment-display-pin-diagr_0.png'),
+(27, '2nd product', 'good product', 30, '7-segment-display-pin-diagr_0.png'),
+(28, '3rd product', 'good product', 20, '79822733_1015938935459689_4586960316906078208_o.jpg');
 
 -- --------------------------------------------------------
 
@@ -63,7 +64,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `rule`) VALUES
-(1, 'Mostafa Omar', 'admin@admin.com', '12345678', 0);
+(1, 'Mostafa Omar', 'admin@admin.com', '12345678', 0),
+(2, 'mohamed abdelsadek', 'mohamed@gmail.com', '12345678', 1);
 
 --
 -- Indexes for dumped tables
@@ -95,7 +97,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
