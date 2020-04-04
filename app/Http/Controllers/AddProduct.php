@@ -14,16 +14,16 @@ class AddProduct extends Controller {
 			//foreach ($dir as $fileinfo) {
     			//echo $fileinfo->getFilename() . "\n";
 			//}
-			$this->add(Input::get('name'),Input::get('Description'),$file->getClientOriginalName());
+			$this->add(Input::get('name'),Input::get('Description'),Input::get('price'),$file->getClientOriginalName());
 		}
         
     }
     
-    public function add($name,$ditales,$file){
+    public function add($name,$ditales,$price,$file){
         
 		$connect = mysqli_connect("localhost", "root", "", "sw2");  
  		//$file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));  
-		  $query = "INSERT INTO `products`(`name`, `details`, `photo`)  VALUES ('$name','$ditales','$file')";  
+		  $query = "INSERT INTO products`(name`, details, price, photo)  VALUES ('$name','$ditales',$price,'$file')";  
 		  /*Edit to the query and product table add price value*/
       	if(mysqli_query($connect, $query))  
       	{  
