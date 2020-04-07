@@ -21,7 +21,8 @@
 		</div>
 		<div id="menu">
 			<ul>
-				<li><a href="#" accesskey="5" title="">Log Out</a></li>
+				<li><a href="{{ URL::to('logout') }}" accesskey="5" title="">Log Out</a></li>
+				<input type="hidden" value="{{ csrf_token() }}" name="_token">
 			</ul>
 		</div>
 	</div>

@@ -37,6 +37,7 @@ Route::post('AddProduct', 'AddProduct@upload');
 Route::post('Log_in', 'Log_in@sign_in');
 Route::post('Registerr', 'Registerr@upload');
 Route::post('deleteproduct', 'deleteproduct@delete');
+Route::get('logout', 'logout@out');
 
 
 Route::get('/Register', function(){
