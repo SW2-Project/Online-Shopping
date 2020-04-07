@@ -27,21 +27,14 @@ class Log_in extends Controller {
 		$query = 'SELECT * FROM `users` where email="'.$email.'" and password="'.$password.'"';
 		//echo $query;
 		$result = $connect->query($query);
-		//echo $result->num_rows;
-		//echo $result->fetch_assoc()['rule'];
-		//var_dump($result);
-		//$_SESSION['name']=$result->fetch_assoc()['name'];
-		//$_SESSION['rule']=$result->fetch_assoc()['rule'];
       	if($result->num_rows > 0)  
       	{
 			
 			if($result->fetch_assoc()['rule'] == 1){
-				$_SESSION['name']=$result->fetch_assoc()['name'];
-				$_SESSION['rule']=$result->fetch_assoc()['rule'];
+				$_SESSION['rule']=1;
 				return 0;
 			}elseif($result->fetch_assoc()['rule'] == 0){
-				$_SESSION['name']=$result->fetch_assoc()['name'];
-				$_SESSION['rule']=$result->fetch_assoc()['rule'];
+				$_SESSION['rule']=0;
 				return 1;
 			}
 			
