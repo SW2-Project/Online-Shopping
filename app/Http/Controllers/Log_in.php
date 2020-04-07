@@ -1,4 +1,5 @@
 <?php namespace App\Http\Controllers;
+session_start();
 use \Request as Input;
 
 
@@ -31,6 +32,8 @@ class Log_in extends Controller {
 		//var_dump($result);
       	if($result->num_rows > 0)  
       	{
+			$_SESSION['name']=$result->fetch_assoc()['name'];
+			$_SESSION['rule']=$result->fetch_assoc()['rule'];
 			if($result->fetch_assoc()['rule'] == 1){
 				return 0;
 			}elseif($result->fetch_assoc()['rule'] == 0){
