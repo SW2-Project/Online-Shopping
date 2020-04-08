@@ -1,3 +1,13 @@
+<?php
+	session_start();
+	function cheak(){
+		if($_SESSION['rule']!=0){
+			echo '<script>alert("you are not admin")</script>';
+			echo'<script>window.location.replace("logout");</script>';
+		}
+	}
+	cheak();
+?>
 <!DOCTYPE html>
 <html>
     <head>
