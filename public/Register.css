@@ -109,15 +109,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   /*-- end reset --*/
   body {
-    background: #76b852;
+    background: #3e3d3d;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #76b852, #8DC26F);
     background: -moz-linear-gradient(to top, #76b852, #8DC26F);
     background: -o-linear-gradient(to top, #76b852, #8DC26F);
-    background: linear-gradient(to top, #76b852, #8DC26F);
+    background: #3e3d3d;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
+	
+
   }
   
   h1 {
@@ -127,6 +129,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-weight: 100;
     text-transform: capitalize;
     letter-spacing: 4px;
+    border: solid 1px #344444;
     font-family: 'Roboto', sans-serif;
   }
   
@@ -138,31 +141,36 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   .main-agileinfo {
     width: 35%;
     margin: 3em auto;
-    background: rgba(0, 0, 0, 0.18);
+    background: #bac675;
     background-size: cover;
+	border-bottom-left-radius: 27px;
+	border-bottom-right-radius: 27px;
   }
   
   .agileits-top {
     padding: 3em;
+
+
   }
   
   input[type="text"], input[type="email"], input[type="password"] {
     font-size: 0.9em;
-    color: #fff;
+    color: #3e3d3d;
     font-weight: 100;
     width: 94.5%;
     display: block;
     border: none;
     padding: 0.8em;
-    border: solid 1px rgba(255, 255, 255, 0.37);
+    border: solid 1px #3e3d3d;
     -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
     transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #fff 4%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #fff 4%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #a4b15c 4%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #a4b15c 4%);
     background-position: -800px 0;
     background-size: 100%;
     background-repeat: no-repeat;
-    color: #fff;
+	border-radius: 27px;
+    color: #3e3d3d;
     font-family: 'Roboto', sans-serif;
   }
   
@@ -170,14 +178,16 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 2em 0;
   }
   
-  .text:focus, .text:valid {
+  .text:focus, .text:valid,.text:hover {
     box-shadow: none;
     outline: none;
+	background-color: #a4b15c;
     background-position: 0 0;
+	 transition: .6s;
   }
   
   .text:focus::-webkit-input-placeholder, .text:valid::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    color: #3e3d3d;
     font-size: .9em;
     -webkit-transform: translateY(-30px);
     -moz-transform: translateY(-30px);
@@ -188,30 +198,31 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   
   ::-webkit-input-placeholder {
-    color: #fff;
+    color: #3e3d3d;
     font-weight: 100;
   }
   
   :-moz-placeholder {
     /* Firefox 18- */
-    color: #fff;
+    color: #3e3d3d;
   }
   
   ::-moz-placeholder {
     /* Firefox 19+ */
-    color: #fff;
+    color: #3e3d3d;
   }
   
   :-ms-input-placeholder {
-    color: #fff;
+    color: #3e3d3d;
   }
   
   input[type="submit"] {
     font-size: .9em;
-    color: #fff;
-    background: #76b852;
+    color: #3e3d3d;
+    background:  #bac675;
+	border-radius :27px;
     outline: none;
-    border: 1px solid #76b852;
+    border: 1px solid #3e3d3d;
     cursor: pointer;
     padding: 0.9em;
     -webkit-appearance: none;
@@ -226,19 +237,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     -o-transition: .5s all;
     -ms-transition: .5s all;
     transition: .5s all;
-    background: #8DC26F;
+    background: #a4b15c;
+	 transition: .6s;
   }
   
   .agileits-top p {
     font-size: 1em;
-    color: #fff;
+    color: #3e3d3d;
     text-align: center;
     letter-spacing: 1px;
     font-weight: 300;
   }
   
   .agileits-top p a {
-    color: #fff;
+    color: #3e3d3d;
     -webkit-transition: .5s all;
     -moz-transition: .5s all;
     transition: .5s all;
@@ -246,14 +258,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   
   .agileits-top p a:hover {
-    color: #76b852;
+    color: #a4b15c;
+	 transition: .6s;
   }
   
   /*-- //main --*/
   /*-- checkbox --*/
   .wthree-text label {
     font-size: 0.9em;
-    color: #fff;
+    color: #3e3d3d;
     font-weight: 200;
     cursor: pointer;
     position: relative;
@@ -283,7 +296,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     z-index: 1;
     width: 1.2em;
     height: 1.2em;
-    border: 1px solid #fff;
+    border: 1px solid #a4b15c;
     -webkit-transition: .4s ease-in-out;
     -moz-transition: .4s ease-in-out;
     -o-transition: .4s ease-in-out;
@@ -297,7 +310,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
     height: .5rem;
-    border-color: #fff;
+    border-color: #a4b15cf;
     border-top-color: transparent;
     border-right-color: transparent;
   }
@@ -321,7 +334,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     }
   
     100% {
-      border-bottom-color: #fff;
+      border-bottom-color: #a4b15c;
       border-left-color: #fff;
     }
   }
@@ -351,7 +364,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   
   .colorlibcopy-agile p a:hover {
-    color: #000;
+    color:#3e3d3d;
+	 transition: .6s;
   }
   
   /*-- //copyright --*/
