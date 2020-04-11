@@ -25,6 +25,7 @@
             }
 
             .flex-center {
+                background-color :  #3e3d3d;
                 align-items: center;
                 display: flex;
                 justify-content: center;
@@ -45,18 +46,26 @@
             }
 
             .title {
+                background-color : #3e3d3d;
+                color: #fff;
                 font-size: 84px;
             }
 
             .links > a {
-                color: #636b6f;
-                padding: 0 25px;
+                background-color : #bac675;   
+				border-radius: 27px;				
+                color: #3e3d3d;
+                padding: 15px 25px;
                 font-size: 13px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
             }
+			.links > a:hover {
+				background-color:  #a4b15c;
+				 transition: .6s;
+			}
 
             .m-b-md {
                 margin-bottom: 30px;
@@ -68,25 +77,8 @@
             
             <div class="content">
                 <div class="title m-b-md">
-                    clint sight
+                    Product List for Client
                 </div>
-                <div id="menu">
-            <ul>
-				<li><a href="{{ URL::to('Login') }}" accesskey="5" title="">Login</a></li>
-				<input type="hidden" value="{{ csrf_token() }}" name="_token">
-			</ul>
-		</div>
-<!--
-                <div class="links">
-                    <a href="Admin">Admin Sight</a>
-                    <a href="Add_product">Add Product</a>
-                    <a href="delete_product">delete</a>
-                    <a href="Login">Login</a>
-                    <a href="Register">Register</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>-->
             </div>
         </div>
     </body>
