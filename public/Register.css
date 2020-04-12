@@ -123,13 +123,18 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   
   h1 {
-    font-size: 3em;
+    width: 35.5%;
+    margin: auto;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-size: 2.5em;
     text-align: center;
-    color: #fff;
+    color: #3e3d3d;
+    background-color: #bac675;
     font-weight: 100;
     text-transform: capitalize;
     letter-spacing: 4px;
-    border: solid 1px #344444;
+    border: solid 1px #bac675;
     font-family: 'Roboto', sans-serif;
   }
   
@@ -140,8 +145,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   .main-agileinfo {
     width: 35%;
-    margin: 3em auto;
-    background: #bac675;
+    margin: auto;
+    background: #3e3d3d;
+    border : 5px solid #bac675;
     background-size: cover;
 	border-bottom-left-radius: 27px;
 	border-bottom-right-radius: 27px;
@@ -161,13 +167,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     display: block;
     border: none;
     padding: 0.8em;
-    border: solid 1px #3e3d3d;
+    border: solid 1px #bac675;
     -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
     transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #a4b15c 4%);
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #a4b15c 4%);
     background-position: -800px 0;
     background-size: 100%;
+    background-color: #bac675;
     background-repeat: no-repeat;
 	border-radius: 27px;
     color: #3e3d3d;
@@ -227,7 +234,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding: 0.9em;
     -webkit-appearance: none;
     width: 100%;
-    margin: 2em 0;
+    margin: 1em 0;
     letter-spacing: 4px;
   }
   
