@@ -8,11 +8,11 @@ body
 {
 	margin: 0px;
 	padding: 0px;
-	background: #3e3d3d;
+	background: #F87979;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 11pt;
 	font-weight: 300;
-	color:#bac675;
+	color: #6c6c6c
 }
 
 h1, h2, h3
@@ -20,7 +20,7 @@ h1, h2, h3
 	margin: 0;
 	padding: 0;
 	font-weight: 600;
-	color: #bac675;
+	color: #454445;
 }
 
 p, ol, ul
@@ -45,7 +45,7 @@ strong
 
 a
 {
-	color: #bac675;
+	color: #2C383B;
 }
 
 a:hover
@@ -56,9 +56,7 @@ a:hover
 .container
 {
 	margin: 0px auto;
-	width: 100%;
-
-
+	width: 1200px;
 }
 
 /*********************************************************************************/
@@ -111,7 +109,7 @@ a:hover
 	padding: 0em 0em 0em 0em;
 	overflow: hidden;
 	list-style: none;
-	color: #bac675;
+	color: #6c6c6c
 }
 
 ul.style1 li
@@ -140,7 +138,7 @@ ul.style1 h3
 	text-transform: uppercase;
 	font-size: 1.2em;
 	font-weight: 600;
-	color: #bac675;
+	color: #454445;
 }
 
 ul.style1 a
@@ -190,7 +188,7 @@ ul.style2 li:first-child
 
 ul.style2 .icon
 {
-	color: #bac675;
+	color: #FFF;
 }
 
 ul.style3
@@ -308,9 +306,7 @@ ul.contact li a.icon-rss:before
 {
 	display: inline-block;
 	padding: 1.3em 3em;
-	background: #bac675;
-	border: 1px solid #3e3d3d;
-	border-radius: 27px;
+	background: #F87979;
 	-moz-transition: opacity 0.25s ease-in-out;
 	-webkit-transition: opacity 0.25s ease-in-out;
 	-o-transition: opacity 0.25s ease-in-out;
@@ -320,13 +316,11 @@ ul.contact li a.icon-rss:before
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: 600;
-	color: #3e3d3d;
+	color: #FFF;
 }
 
 .button:hover
 {
-	background : #a4b15c;
-	transition: .6s;
 }
 
 .button:active
@@ -346,16 +340,14 @@ ul.contact li a.icon-rss:before
 
 	.title
 {
-	width :100%;
 	margin-bottom: 3em;
-	background-color: #bac675;
 }
 
 .title h2
 {
 	font-weight: 400;
 	font-size: 2.8em;
-	color: #3e3d3d;
+	color: #323232;
 }
 
 .title .byline
@@ -373,7 +365,7 @@ ul.contact li a.icon-rss:before
 	
 #header-wrapper
 {
-	background: #3e3d3d;
+	background: #FFF;
 }
 
 #header
@@ -388,11 +380,10 @@ ul.contact li a.icon-rss:before
 
 #logo
 {
-	position: fixed;
+	position: absolute;
+	top: 2em;
 	left: 0;
 	width: 100%;
-	background: #bac675;
-		padding-bottom:30px;
 }
 
 #logo h1
@@ -401,10 +392,9 @@ ul.contact li a.icon-rss:before
 	font-size: 2.5em;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: #bac675;
+	color: #ED7070;
 	padding-right: 0.50em;
-		margin-top: 30px;
-
+	border-right: 1px solid rgba(0,0,0,.1);
 }
 
 #logo span
@@ -418,11 +408,8 @@ ul.contact li a.icon-rss:before
 
 #logo a
 {
-
-	margin-left: 40px;
 	text-decoration: none;
-	color: #3e3d3d;
-
+	color: #ED7070;
 }
 
 /*********************************************************************************/
@@ -431,7 +418,7 @@ ul.contact li a.icon-rss:before
 
 #menu
 {
-	position: fixed;
+	position: absolute;
 	right: 0;
 	top: 1.6em;
 }
@@ -450,10 +437,8 @@ ul.contact li a.icon-rss:before
 
 #menu li a, #menu li span
 {
-	border: 1px solid #3e3d3d;
-	border-radius: 27px;
 	display: inline-block;
-	margin-right: 30px;
+	margin-left: 1px;
 	padding: 1em 1.5em;
 	letter-spacing: 0.10em;
 	text-decoration: none;
@@ -461,13 +446,11 @@ ul.contact li a.icon-rss:before
 	text-transform: uppercase;
 	outline: 0;
 	color: #212121;
-	background: #bac675;
+	background: rgba(0,0,0,.02);
 }
 
 #menu li:hover a, #menu li.active a, #menu li.active span
 {
-	background-color:#a4b15c;
-	transition: .6s;
 }
 
 #menu .current_page_item a
@@ -636,7 +619,7 @@ ul.contact li a.icon-rss:before
 {
 	overflow: hidden;
 	padding: 7em 0em;
-	background: #3e3d3d;
+	background: #FFF;
 	text-align: center;
 }
 
@@ -667,7 +650,7 @@ ul.contact li a.icon-rss:before
 {
 	margin-bottom: 1.5em;
 	padding-bottom: 1.5em;
-	border-bottom: 1px solid #3e3d3d;
+	border-bottom: 1px solid #E3E3E3;
 }
 
 #featured .title h2
@@ -686,7 +669,7 @@ ul.contact li a.icon-rss:before
 	display: inline-block;
 	width: 150px;
 	height: 150px;
-	background: #bac675;
+	background: #2C383B;
 	margin: 0px auto 20px auto;
 	line-height:  150px;
 	font-size: 5em;
@@ -728,7 +711,7 @@ ul.contact li a.icon-rss:before
 #slider-wrapper
 {
 	padding: 6em 0em;
-	background: #bac675;
+	background: #DB3256;
 }
 
 #slider
@@ -775,7 +758,7 @@ ul.contact li a.icon-rss:before
 	width: 1200px;
 	height: 80px;
 	line-height: 80px;
-	background: #bac675;
+	background: #111111;
 	text-align: center;
 	opacity: 0.85;
 	font-weight: normal;
@@ -867,7 +850,7 @@ ul.contact li a.icon-rss:before
 {
 	font-size: 2em;
 	font-weight: 300;
-	color: #3e3d3d;
+	color: #FFF;
 }
 
 #footer .title .byline
@@ -876,7 +859,7 @@ ul.contact li a.icon-rss:before
 	padding-top: 1em;
 	text-transform: uppercase;
 	font-size: 0.80em;
-	color: 3e3d3d);
+	color: rgba(255,255,255,0.5);
 }
 
 #footer .column1,
@@ -905,7 +888,7 @@ ul.contact li a.icon-rss:before
 	overflow: hidden;
 	margin: 5em auto 2em auto;
 	padding: 2em 0em 2em 0em;
-	background: #3e3d3d;
+	background: #ECECEC;
 }
 
 #extra h2
@@ -937,21 +920,17 @@ ul.contact li a.icon-rss:before
 	overflow: hidden;
 	margin-bottom: 5em;
 	padding-bottom: 5em;
-
+	border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 .extra2 .button
 {
-	margin-top: -10px;
-	margin-bottom: 25px;
+	margin-top: 2em;
 }
 
 .extra2 .title h2
 {
-	padding-top: 10px;
-	padding-bottom:20px;
 	font-size: 2em;
-	color: #3e3d3d;
 }
 
 .extra2 .title .byline
@@ -962,22 +941,17 @@ ul.contact li a.icon-rss:before
 .extra2 .ebox1,
 .extra2 .ebox2
 {
-	width: 460px;
-	background: #3e3d3d;
-	border: 5px solid #bac675;
-	border-bottom-left-radius: 27px;
-	border-bottom-right-radius: 27px;
+	width: 560px;
 }
 
 .extra2  .ebox1
 {
 	float: left;
-	margin-left : 60px;
-
+	padding-right: 40px;
+	border-right: 1px solid rgba(0,0,0,.1);
 }
 
 .extra2 .ebox2
 {
-	margin-right:60px;
 	float: right;
 }
