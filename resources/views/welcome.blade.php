@@ -79,10 +79,7 @@
                 <div class="title m-b-md">
                     Product List for Client
                 </div>
-<<<<<<< HEAD
 		</div>
-=======
->>>>>>> d24278f6624f434ecef55faeb7ade45b7be1f4db
                 <div class="links">
                     <a href="Login">Login</a>
                 </div>
