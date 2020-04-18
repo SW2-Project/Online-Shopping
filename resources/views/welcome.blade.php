@@ -70,23 +70,10 @@
                 <div class="title m-b-md">
                     clint sight
                 </div>
-                <div id="menu">
-            <ul>
-				<li><a href="{{ URL::to('Login') }}" accesskey="5" title="">Login</a></li>
-				<input type="hidden" value="{{ csrf_token() }}" name="_token">
-			</ul>
 		</div>
-<!--
                 <div class="links">
-                    <a href="Admin">Admin Sight</a>
-                    <a href="Add_product">Add Product</a>
-                    <a href="delete_product">delete</a>
                     <a href="Login">Login</a>
-                    <a href="Register">Register</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>-->
+                </div>
             </div>
         </div>
     </body>
