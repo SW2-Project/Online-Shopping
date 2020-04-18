@@ -1,4 +1,14 @@
-
+<?php
+	session_start();
+	echo $_SESSION['rule'];
+	function cheak(){
+		if($_SESSION['rule']!=0){
+			echo '<script>alert("you are not admin")</script>';
+			echo'<script>window.location.replace("logout");</script>';
+		}
+	}
+	$t=cheak();
+?>
 <!DOCTYPE html>
 
 

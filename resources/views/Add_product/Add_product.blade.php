@@ -44,7 +44,7 @@
         
         ::placeholder{color:#3e3d3d;}
     
-    </style>
+    </style><!--
         button{width: 100%; background: none; border: 1px solid #fff; border-radius: 3px; padding: 6px 15px; box-sizing: border-box; margin-bottom: 20px; font-size: 16px; background: #bac675; border: 0; cursor: pointer; color: #3e3d3d;}
         button:hover{ background: #a4b15c; transition: .6s;}
     -->
