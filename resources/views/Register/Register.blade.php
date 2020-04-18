@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Creative Colorlib SignUp Form</title>
+<title>SignUp</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -11,10 +11,10 @@
 </head>
 <body>
 	<div class="main-w3layouts wrapper">
-		<h1>Creative SignUp Form</h1>
+		<h1>Sign Up </h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-				<form action="{{ URL::to('Registerr') }}" method="post" enctype="multipart/form-data">
+				<form action="Registerr" method="post" enctype="multipart/form-data">
 					<input class="text" type="text" name="Username" placeholder="Username" required="">
 					<input class="text email" type="email" name="email" placeholder="Email" required="">
 					<input class="text" type="password" name="password" placeholder="Password" required="">
@@ -26,24 +26,13 @@
 					</div>
 					<input type="submit" value="SIGNUP">
 				</form>
-				<p>Don't have an Account? <a href="Login"> Login Now!</a></p>
+				<p>have an Account ?! <a href="Login"> Login Now!</a></p>
 			</div>
 		</div>
 		<div class="colorlibcopy-agile">
 		<p>&copy; SoftWare Enginering 2 Project <a>SW2</a>.</p>
 		</div>
-		<ul class="colorlib-bubbles">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
+		
 	</div>
 </body>
 </html>

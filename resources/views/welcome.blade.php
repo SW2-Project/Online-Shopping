@@ -25,6 +25,7 @@
             }
 
             .flex-center {
+                background-color :  #3e3d3d;
                 align-items: center;
                 display: flex;
                 justify-content: center;
@@ -45,18 +46,26 @@
             }
 
             .title {
+                background-color : #3e3d3d;
+                color: #fff;
                 font-size: 84px;
             }
 
             .links > a {
-                color: #636b6f;
-                padding: 0 25px;
+                background-color : #bac675;   
+				border-radius: 27px;				
+                color: #3e3d3d;
+                padding: 15px 25px;
                 font-size: 13px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
             }
+			.links > a:hover {
+				background-color:  #a4b15c;
+				 transition: .6s;
+			}
 
             .m-b-md {
                 margin-bottom: 30px;
@@ -68,9 +77,12 @@
             
             <div class="content">
                 <div class="title m-b-md">
-                    clint sight
+                    Product List for Client
                 </div>
+<<<<<<< HEAD
 		</div>
+=======
+>>>>>>> d24278f6624f434ecef55faeb7ade45b7be1f4db
                 <div class="links">
                     <a href="Login">Login</a>
                 </div>
