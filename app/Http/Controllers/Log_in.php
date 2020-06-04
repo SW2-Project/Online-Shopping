@@ -30,13 +30,20 @@ class Log_in extends Controller {
       	if($result->num_rows > 0)  
       	{
 			
-			if($result->fetch_assoc()['rule'] == 1){
-				$_SESSION['rule']=1;
-				return 0;
-			}elseif($result->fetch_assoc()['rule'] == 0){
-				$_SESSION['rule']=0;
-				return 1;
-			}
+			$row = $result->fetch_assoc();
+				if($row['rule'] == 1){
+					$_SESSION['rule']=1;
+					$_SESSION['name']=$row['name'];
+					$_SESSION['password']=$row['password'];
+					$_SESSION['id']=$row['id'];
+					return 0;
+				}elseif($row['rule'] == 0){
+					$_SESSION['rule']=0;
+					$_SESSION['name']=$row['name'];
+					$_SESSION['password']=$row['password'];
+					$_SESSION['id']=$row['id'];
+					return 1;
+				}
 			
 		}else{
 			return -1;
