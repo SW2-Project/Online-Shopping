@@ -6,7 +6,8 @@
 	//		echo'<script>window.location.replace("logout");</script>';
 	//	}
 	//}
-	//cheak();
+    //cheak();
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -67,17 +68,22 @@
         </div>
             <?php
                 $conn = mysqli_connect("localhost", "root", "", "sw2");
-                 Check connection
+                 //Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
-                $sql = "SELECT * FROM products";
+                $sql = "SELECT * FROM cart " ;
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
-                    // output data of each row
+                     // output data of each row
                     while($row = $result->fetch_assoc()) {
-                        echo "<tr><td>" . $row["id"]. "</td><td>" . $row["name"] .'<td>  
-                                    <img src="uploads\\'.$row['photo'].'" height="100" width="100" class="img-thumnail" />  
+                        echo "<tr>
+                                <td>" . $row["userid"]. "</td>
+                                <td>" . $sql = "SELECT name FROM user WHERE userid = id" ."</td>
+                                <td>" . $row["productid"]. "</td>
+                                <td>" . $sql = "SELECT name FROM product WHERE productid = id" ."</td>
+                                <td>" . $sql = "SELECT price FROM product WHERE productid = id" ."</td>
+                                
                                </td></tr>';
                     }
 					echo'';
