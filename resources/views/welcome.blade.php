@@ -14,7 +14,17 @@ img.emoji {
 	vertical-align: -0.1em !important;
 	background: none !important;
 	padding: 0 !important;
-} </style>
+}
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+.top-left {
+    position: absolute;
+    left: 10px;
+    top: 18px;
+}
 </style>
 
 
@@ -34,9 +44,13 @@ img.emoji {
 <div class="navbar-section">
 <div class="container">
 <div class="row">
-
+<div class="top-right">
+<a href="#">Home</a>
+<a href="{{ route('Login') }}">Login</a>
+</div>
+<div class="top-left"><h4>Online Shopping</h4></div>
 <div class="col-md-7">
-<div class="logo"><h4>Online Shopping</h4></div>
+
 </div>
 <div class="col-md-5 text-left">
 <div class="search">
@@ -98,8 +112,7 @@ img.emoji {
 </div>
 </div>
 
-<center>
-</center>
+
 
 </body>
 </html>
