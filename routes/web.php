@@ -50,4 +50,11 @@ Route::get('/Login', function(){
 Route::get('/delete_product', function(){
     return view('delete_product.delete_product');
 })->name('delete_product');
+Route::get('/profile', function(){
+    return view('profile.profile');
+})->name('profile');
+Route::get('/edit_profile', function(){
+    return view('edit_profile.edit_profile');
+})->name('edit_profile');
+
 

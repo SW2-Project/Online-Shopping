@@ -45,7 +45,9 @@ img.emoji {
 <div class="container">
 <div class="row">
 <div class="top-right">
-<a href="#">Home</a>
+<a href="#">manage account</a>
+
+
 <a href="{{ route('Login') }}">Login</a>
 </div>
 <div class="top-left"><h4>Online Shopping</h4></div>

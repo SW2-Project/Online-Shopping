@@ -11,12 +11,14 @@ class Log_in extends Controller {
 		if($i==1){
 			return redirect('Admin');
 		}elseif($i==0){
-			echo '<script>alert("we curruntly working on this sight please be patient >.<")</script>';
-			//return redirect('cient');
+		
+			return redirect('/');
 		}
 		else{
-			echo '<script>alert("RAGE3 7SABATK W HAT 24YA2Y")</script>';
+			echo '<script>alert("RAGE3 7SABATK W HAT 24YA2Y >.<")</script>';
+			echo'<script>window.location.replace("Login");</script>';
 		}
+	
 		
         
     }
