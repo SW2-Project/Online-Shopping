@@ -66,13 +66,30 @@
 
     <div class="user-information-container">
         <img src="download.png">
-        <h1>username</h1>
-        <p class="uid">ID: user id</p>
+        <?php
+    echo'<h1>'.$_SESSION["name"].'</h1>
+    <p class="uid">ID: '.$_SESSION["id"].'</p>
+    ';
+?>
         <a href="edit_profile" id="account_settings"><i class="icon"></i>Edit Profile</a>
     </div>
 
     <div class="followers">
-        <a href="#"><span class="followers_count">0</span>Items Bought</a>
+    <?php
+    //   $conn = mysqli_connect("localhost", "root", "", "sw2");
+    //   // Check connection
+    //   if ($conn->connect_error) {
+    //       die("Connection failed: " . $conn->connect_error);
+    //   }
+    //   $sql = "SELECT * FROM cart where userid = ".$_SESSION["id"]."";
+    //   $result = $conn->query($sql);
+    
+    //   echo'
+    //   <a href="cart"><span class="followers_count">'.$result->num_rows.'</span>Items Bought</a>
+    //   ';
+    //   $conn->close();
+ ?>
+      <a href="#"><span class="followers_count">0</span>Items Bought</a>  
     </div>
 </div>
 <div class="box">
@@ -80,19 +97,25 @@
         <span><i class="icon my-games"></i>Old Data</span>
     </div>
         <ul class="games-played">
-            <li><span>name</span></li>
-            <li><span>old password</span></li>
-            <li><span>email</span></li>
+        <?php
+    echo' <li><span>Name :'.$_SESSION["name"].'</span></li>
+            <li><span>Password :'.$_SESSION["password"].'</span></li>
+    ';
+?>
+           
 </div>
 </div>
 <div class="col-middle">
-    <form action="{{ URL::to('AddProduct') }}" method="post" enctype="multipart/form-data">
+<form action="{{ URL::to('edit') }}" method="post" enctype="multipart/form-data">
             
             <div class="inputs">
                 <input type="text" placeholder="Enter New Name" name="name" required="">
-                <input type="text" placeholder="new password" name = "Description" required="">
+                <input type="text" placeholder="new password" name = "password" required="">
 				<input type="submit" value="Submit" name="submit"> 
-                <input type="hidden" value="{{ csrf_token() }}" name="_token"></div>
+                
+
+                </div>
+                <input type="hidden" value="{{ csrf_token() }}" name="_token">
             </form>
 </div>
 </div>

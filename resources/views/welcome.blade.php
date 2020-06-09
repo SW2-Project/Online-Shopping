@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,10 +25,31 @@ img.emoji {
     top: 18px;
 }
 .top-left {
-    position: absolute;
-    left: 10px;
-    top: 18px;
+ position: absolute;
+ left: 10px;
+ top: 10px;
+ background-color : #bac675;   
+ border-radius: 27px;				
+ color: #3e3d3d;
+ letter-spacing: .1rem;
+ text-decoration: none;
+ text-transform: uppercase;
+ padding: 5px 10px;
+ font-size: 13px;
+ font-weight: 600;
 }
+.links > a {
+ top: 10px;
+ background-color : #bac675;   
+ border-radius: 27px;				
+ color: #3e3d3d;
+ padding: 10px 15px;
+ font-size: 13px;
+ font-weight: 600;
+ letter-spacing: .1rem;
+ text-decoration: none;
+ text-transform: uppercase;
+  }
 </style>
 
 
@@ -45,10 +70,25 @@ img.emoji {
 <div class="container">
 <div class="row">
 <div class="top-right">
-<a href="#">manage account</a>
 
+<?php
+	if($_SESSION['rule']==1){
+        echo'<div class="links">
+        <a href="profile">'.$_SESSION["name"].'</a>
+        
+        <a href="logout">Logout</a>
+        </div>
 
-<a href="{{ route('Login') }}">Login</a>
+        ';
+    }
+    else{
+        echo'<div class="links">
+        <a href="Login">Login</a>
+        </div>
+        ';
+    }
+?>
+
 </div>
 <div class="top-left"><h4>Online Shopping</h4></div>
 <div class="col-md-7">
@@ -79,7 +119,7 @@ img.emoji {
 <div class="widget-body">
 <div class="row list-item-row display-flex">
 <?php
-	session_start();
+	
     $conn = mysqli_connect("localhost", "root", "", "sw2");
     // Check connection
     if ($conn->connect_error) {

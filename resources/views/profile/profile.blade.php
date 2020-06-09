@@ -66,12 +66,31 @@
 
     <div class="user-information-container">
         <img src="download.png">
-        <h1>username</h1>
-        <p class="uid">ID: user id</p>
+        <?php
+    echo'<h1>'.$_SESSION["name"].'</h1>
+    <p class="uid">ID: '.$_SESSION["id"].'</p>
+    ';
+?>
+        
+       
         <a href="edit_profile" id="account_settings"><i class="icon"></i>Edit Profile</a>
     </div>
 
     <div class="followers">
+    <?php
+    //   $conn = mysqli_connect("localhost", "root", "", "sw2");
+    //   // Check connection
+    //   if ($conn->connect_error) {
+    //       die("Connection failed: " . $conn->connect_error);
+    //   }
+    //   $sql = "SELECT * FROM cart where userid = ".$_SESSION["id"]."";
+    //   $result = $conn->query($sql);
+    
+    //   echo'
+    //   <a href="cart"><span class="followers_count">'.$result->num_rows.'</span>Items Bought</a>
+    //   ';
+    //   $conn->close();
+ ?>
         <a href="#"><span class="followers_count">0</span>Items Bought</a>
     </div>
 </div>
