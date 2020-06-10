@@ -17,7 +17,8 @@ class Registerr extends Controller {
       	$query = "INSERT INTO `users`(`name`, `email`, `password`,`rule`)  VALUES ('$name','$email','$password',1)";  
       	if(mysqli_query($connect, $query))  
       	{  
-        	echo '<script>alert("User Added Successfully")</script>';  /* users Added*/
+			echo '<script>alert("User Added Successfully")</script>';  /* users Added*/
+			echo'<script>window.location.replace("Login");</script>';
 		}
 		
  	} 

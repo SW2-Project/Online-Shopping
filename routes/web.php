@@ -38,7 +38,7 @@ Route::post('Log_in', 'Log_in@sign_in');
 Route::post('Registerr', 'Registerr@upload');
 Route::post('deleteproduct', 'deleteproduct@delete');
 Route::get('logout', 'logout@out');
-
+Route::post('edit', 'edit_data@edit');
 
 Route::get('/Register', function(){
     return view('Register.Register');
@@ -50,6 +50,13 @@ Route::get('/Login', function(){
 Route::get('/delete_product', function(){
     return view('delete_product.delete_product');
 })->name('delete_product');
+Route::get('/profile', function(){
+    return view('profile.profile');
+})->name('profile');
+Route::get('/edit_profile', function(){
+    return view('edit_profile.edit_profile');
+})->name('edit_profile');
+
 
 Route::get('/cart', function(){
     return view('cart.cart');

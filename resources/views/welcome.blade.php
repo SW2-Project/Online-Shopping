@@ -1,103 +1,160 @@
+<?php
+	session_start();
+	
+?>
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+<title>Home Page</title>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+.top-left {
+ position: absolute;
+ left: 10px;
+ top: 10px;
+ background-color : #bac675;   
+ border-radius: 27px;				
+ color: #3e3d3d;
+ letter-spacing: .1rem;
+ text-decoration: none;
+ text-transform: uppercase;
+ padding: 5px 10px;
+ font-size: 13px;
+ font-weight: 600;
+}
+.links > a {
+ top: 10px;
+ background-color : #bac675;   
+ border-radius: 27px;				
+ color: #3e3d3d;
+ padding: 10px 15px;
+ font-size: 13px;
+ font-weight: 600;
+ letter-spacing: .1rem;
+ text-decoration: none;
+ text-transform: uppercase;
+  }
+</style>
 
-        <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+<link rel='stylesheet' id='bootstrap-css' href='bootstrap.min2.css' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css' href='style.css' type='text/css' media='all' />
 
-            .full-height {
-                height: 100vh;
-            }
+<link rel='stylesheet' id='hover_effects-css' href='hover-effects1.css' type='text/css' media='all' />
 
-            .flex-center {
-                background-color :  #3e3d3d;
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
 
-            .position-ref {
-                position: relative;
-            }
+<link rel='stylesheet' id='wpdreams-asl-basic-css' href='style.basic.css' type='text/css' media='all' />
+             
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
 
-            .content {
-                text-align: center;
-            }
+<body>
 
-            .title {
-                background-color : #3e3d3d;
-                color: #fff;
-                font-size: 84px;
-            }
+<div class="navbar-section">
+<div class="container">
+<div class="row">
+<div class="top-right">
 
-            .links > a {
-                background-color : #bac675;   
-				border-radius: 27px;				
-                color: #3e3d3d;
-                padding: 15px 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-			.links > a:hover {
-				background-color:  #a4b15c;
-				 transition: .6s;
-			}
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            
-            <div class="content">
-                <div class="title m-b-md">
-                    Product List for Client
-                </div>
-		</div>
-                <div class="links">
-                    <?php
-                    session_start();
-                        echo $_SESSION['rule'];
-                        if($_SESSION['rule']!= 1){
-                            echo " <a href='Login'>Login</a>";
-
-  
-                           
- 
-                        }else if($_SESSION['rule']== 1){ 
-                             echo " <a href='logout'>Logout</a>";
-                        }
-                        
-                   
-                    ?>
-                </div>
-            </div>
+<?php
+	if($_SESSION['rule']==1){
+        echo'<div class="links">
+        <a href="profile">'.$_SESSION["name"].'</a>
+        
+        <a href="logout">Logout</a>
         </div>
-    </body>
+
+        ';
+    }
+    else{
+        echo'<div class="links">
+        <a href="Login">Login</a>
+        </div>
+        ';
+    }
+?>
+
+</div>
+<div class="top-left"><h4>Online Shopping</h4></div>
+<div class="col-md-7">
+
+</div>
+<div class="col-md-5 text-left">
+<div class="search">
+<form class="navbar-left" role="search">
+<input type="search" name="search" placeholder="Search for product">
+</form>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="container">
+<div class="main-widget">
+<div class="widget-head">
+
+<div class="clearfix"></div>
+</div>
+<div class="widget-body">
+<div class="row list-item-row display-flex">
+<?php
+	
+    $conn = mysqli_connect("localhost", "root", "", "sw2");
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "SELECT * FROM products";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo 
+            '
+          
+            <div class="col-xs-6 col-sm-2 col-md-2 col-list-padding">
+            <div class="hovereffect">
+            <img class="img-responsive" src="uploads\\'.$row["photo"].'" alt="'.$row["name"].'" />
+            <a href="#" title="'.$row["name"].'">
+            <div class="overlay">
+            <h2>'.$row["name"].'</h2>
+            </div></a>
+            </div>
+            </div>';
+        }
+        //echo'';
+        echo "</table>";
+    } else { echo "0 results"; }
+    $conn->close();
+?>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+</body>
 </html>
