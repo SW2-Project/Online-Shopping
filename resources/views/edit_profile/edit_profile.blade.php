@@ -58,7 +58,7 @@
         <div class="navigation">
     <a class="nav selected" href="#">My Profile</a>
     <a class="nav" href="/">Home Page</a>
-    <a class="nav" href="#">Cart Page</a>
+    <a class="nav" href="cart">Cart Page</a>
 </div>        
 <div class="col-left">
             
