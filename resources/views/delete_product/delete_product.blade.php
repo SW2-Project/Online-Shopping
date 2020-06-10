@@ -67,7 +67,7 @@
         </div>
             <?php
                 $conn = mysqli_connect("localhost", "root", "", "sw2");
-                 Check connection
+                 //Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }

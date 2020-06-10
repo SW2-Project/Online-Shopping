@@ -51,3 +51,7 @@ Route::get('/delete_product', function(){
     return view('delete_product.delete_product');
 })->name('delete_product');
 
+Route::get('/cart', function(){
+    return view('cart.cart');
+})->name('cart');
+

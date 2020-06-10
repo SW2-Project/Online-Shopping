@@ -81,7 +81,21 @@
                 </div>
 		</div>
                 <div class="links">
-                    <a href="Login">Login</a>
+                    <?php
+                    session_start();
+                        echo $_SESSION['rule'];
+                        if($_SESSION['rule']!= 1){
+                            echo " <a href='Login'>Login</a>";
+
+  
+                           
+ 
+                        }else if($_SESSION['rule']== 1){ 
+                             echo " <a href='logout'>Logout</a>";
+                        }
+                        
+                   
+                    ?>
                 </div>
             </div>
         </div>

@@ -1,12 +1,11 @@
 <?php
-	//session_start();
-	//function cheak(){
-	//	if($_SESSION['rule']!=0){
-	//		echo '<script>alert("you are not admin")</script>';
-	//		echo'<script>window.location.replace("logout");</script>';
-	//	}
-	//}
-    //cheak();
+	session_start();
+	function cheak(){
+		if($_SESSION['rule']==0){
+			echo'<script>window.location.replace("logout");</script>';
+		}
+	}
+    cheak();
     
 ?>
 <!DOCTYPE html>
@@ -50,14 +49,16 @@
         <table>
             <tr>
                 <th>Id</th>
-                <th>name</th>
-                <th>Photo</th>
+                <th>user_name</th>
+                <th>product id</th>
+                <th>product name</th>
+                <th>price</th>
             </tr>
         <div class="form-wrap">
         
         <form action="{{ URL::to('deleteproduct') }}" method="post" enctype="multipart/form-data">
             
-                <h1>Add Product</h1>
+                <h1>cart</h1>
                 <div class="contain">
                 <input type="text" placeholder="Enter id" name="id" require>
 				<input type="submit" value="Delete" name="submit">
@@ -67,24 +68,29 @@
         
         </div>
             <?php
+
                 $conn = mysqli_connect("localhost", "root", "", "sw2");
                  //Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
-                $sql = "SELECT * FROM cart " ;
-                $result = $conn->query($sql);
+                $user_id = $_SESSION['id'];
+                $sql4 ="SELECT * FROM cart WHERE userid = ".$user_id."";
+                $result = $conn->query($sql4);
                 if ($result->num_rows > 0) {
                      // output data of each row
                     while($row = $result->fetch_assoc()) {
+                        $sql2 = "SELECT name, price FROM products WHERE id = ".$row['productid']."";
+                        $result2 = $conn->query($sql2);
+                        $row2 = $result2->fetch_assoc();
+                        
                         echo "<tr>
-                                <td>" . $row["userid"]. "</td>
-                                <td>" . $sql = "SELECT name FROM user WHERE userid = id" ."</td>
-                                <td>" . $row["productid"]. "</td>
-                                <td>" . $sql = "SELECT name FROM product WHERE productid = id" ."</td>
-                                <td>" . $sql = "SELECT price FROM product WHERE productid = id" ."</td>
-                                
-                               </td></tr>';
+                                <td>" . $row['userid']. "</td>
+                                <td>" . $_SESSION['name'] ."</td>
+                                <td>" . $row['productid']. "</td>
+                                <td>" . $row2['name'] ."</td>
+                                <td>" . $row2['price']  ."</td>
+                               </td></tr>";
                     }
 					echo'';
                     echo "</table>";
