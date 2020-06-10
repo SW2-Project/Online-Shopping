@@ -72,7 +72,14 @@ img.emoji {
 <div class="top-right">
 
 <?php
-	if($_SESSION['rule']==1){
+	if( $_SESSION==NULL ||$_SESSION['rule']==5){
+        echo'<div class="links">
+        <a href="Login">Login</a>
+        </div>
+        ';
+        
+    }
+    else if($_SESSION['rule']==1){
         echo'<div class="links">
         <a href="profile">'.$_SESSION["name"].'</a>
         
@@ -80,12 +87,7 @@ img.emoji {
         </div>
 
         ';
-    }
-    else{
-        echo'<div class="links">
-        <a href="Login">Login</a>
-        </div>
-        ';
+
     }
 ?>
 
@@ -136,7 +138,7 @@ img.emoji {
             <div class="col-xs-6 col-sm-2 col-md-2 col-list-padding">
             <div class="hovereffect">
             <img class="img-responsive" src="uploads\\'.$row["photo"].'" alt="'.$row["name"].'" />
-            <a href="#" title="'.$row["name"].'">
+            <a href="/product_info/'.$row["id"].'" title="'.$row["name"].'">
             <div class="overlay">
             <h2>'.$row["name"].'</h2>
             </div></a>

@@ -32,7 +32,10 @@ Route::get('/Admin', function(){
 Route::get('/Add_product', function(){
     return view('Add_product.Add_product');
 })->name('Add_product');
-
+Route::get('/product_info/{id}', function($id){
+    return view('product_info.product_info',['id'=>$id]);
+})->name('product_info');
+Route::get('/add_tocart/{id}','add_tocart@add');
 Route::post('AddProduct', 'AddProduct@upload');
 Route::post('Log_in', 'Log_in@sign_in');
 Route::post('Registerr', 'Registerr@upload');
